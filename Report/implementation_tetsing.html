@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <h1>Home Automation System Coursework Report</h1>
+   
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+  </header>
+  <nav>
+    <H2 style="color: #ffffff; margin-left: 16px;">Report Content</H3>
+    <ul>
+      <li><a href="index.html">1. Investigation and Plan</a></li>
+      <li><a href="Design.html">2. Design</a></li>
+      <li><a href="implementation_tetsing.html">3. Implementation and Testing</a></li>
+      <li><a href="evaluation.html">4. Evaluation </a></li>
+      <li><a href="refrences.html">5. References</a></li>
+      <li><a href="summary_count.html">6. Summary word count</a></li>
+    </ul>
+  </nav>
+  <body>
+    <section id="section-3">
+      <div style="text-align: right;">
+        <button style="text-align: right;" onclick="window.print()">Print</button>
+      </div>
+      <h1>3. Implementation & Testing: </h1>
+      <h3>Project Timeline: </h3>
+      <p>The project was managed from start to finish using the project life cycle below, start & end dates were specified.</p>
+        <img src="img/timeLine.png">
+      <h3>Investigation Stage:</h3>
+      <p>I captured the details of the user’s requirements to understand the scope of the project and how it could be achieved.</p>
+      <img style="width: 900px; height: auto;" src="img/invastigation.png">
+      <br>
+      <br>
+      <h3>Plan stage</h3>
+      <p>I outlined the timeline and milestones necessary to complete the project.</p>
+      <img style="width: 900px; height: auto;" src="img/plan.png">
+      <h3>Design Stage</h3>
+      <p>I translated the actual requirements into technical architect designs, in which I defined the components, programming language, tools, and APIs.</p>
+      <img style="width: 900px; height: auto;" src="img/designStage.png">
+      <h3>Create Stage:</h3>
+      <p>I focused on writing the actual program and developing the website and database.</p>
+      <img style="width: 900px; height: auto;" src="img/createStage.png">
+      <h3>Evaluation Stage:</h3>
+      <p>I tested various programs and components to ensure that they worked.</p>
+      <img style="width: 900px; height: auto;" src="img/evaluate.png">
+      <h3>Document Stage: </h3>
+      <p>The main focus was to complete the documentation and to create a zip file containing two subfolders labelled Artefact & Report.</p>
+      <img style="width: 900px; height: auto;" src="img/document.png">
+      <br>
+      <br>
+      <h3>Problems encountered during deployment of the artefacts:  </h3>
+      <table>
+        <tr>
+        <td><h4>Problem 1:</h4>On the Windows computer, the Micro:bit  was connecting as a drive called MAINTENANCE instead of MICROBIT and was causing an issue downloading the codes.
+           I downloaded and updated the Micro:bit  firmware with Micro:bit  V2. Once, updated the Micro:bit  worked and I was able to download the codes.
+          </td> 
+        <td><img style="height: auto; width: 400px;" src="img/hardwareProb.PNG"></td>        
+        </tr>
+        
+        <tr>
+          <td><h4>Problem 2:</h4>         
+            COM 3 port was not opening, which was required to communicate within the Micro:bit  programme. During debugging, I discovered that the other software on the computer was using the COM 3 port.
+             Once the software was disabled/closed, the connection was established with the Database and Micro:bit.
+          </td>
+          <td><img style="height: auto; width: 400px;" src="img/serial.png"></td>
+        </tr>
+       </table>
+       <br>
+       <table style="text-align: center;">
+         <tr>
+            <td>
+              <h3>Operation of the System<div><br> Video demonstration of the functionality of the Artefact </h3>
+                <br>
+                <br>
+                <video width="650px" height="auto" controls autoplay>
+                  <source src="img/Demo01.mp4" type="video/mp4" />
+                </video>
+            </td>
+         </tr>
+    </table>
+    <br>
+     <table>
+       <tr>
+         <th style="width:55%">Artefacts</th>
+         <th style="width:100%">Procedures</th>
+         <th>Demo</th>
+       </tr>
+       <tr>
+         <td>Auto Fan/HVAC</td>
+          <td>
+            1. Prepared the Micro:bit hardware <br>
+            2. Coded the Micro:bit with python<br>
+            3. Downloaded the code in Micro:bit.<br>
+            4: Plugged the Micro:bit to the IoT:bit.<br>
+            5. Used single USB for power supply to the expansion board and switch off.<br>
+            4. Attached the Fan and the Temperature sensor with the pin interfaces.<br>
+            5. Switched on the board.<br>
+            6. Noted the room temperature and fan turned on.<br>
+            7. Temperature data captured by the Micro:bit  IoT platform sent to the ThingSpeak platform.<br>
+            8. Viewed live temperature data on ThingSpeak platform and displayed live on the website under “MicroBit Controller” webpage.<br>
+
+            </td>
+            <td><img style="width: 100%; height: auto" src="img/IOTCode.png"><div><img style="width: 100%; height: auto" src="img/IOT-Fan-Diagram.png"></div></td>
+           
+             </tr>
+       <tr>
+         <td>Remote/Internet Activated Lights</td>
+         <td>
+          1. Prepared the Micro:bit hardware.<br>
+          2. Coded the Micro:bit with python.<br>
+          3. Downloaded the code in Micro:bit using the USB.<br>
+          4. Assembled the Micro:bit device with light.<br>
+          5. Connected the Micro:bit with USB within COM3 port.<br>
+          6. Using the Turn On/Off button on the “Micro:bit Controller” web page, controlled the LED Lights remotely.<br>
+          <p>
+            <h4>Technical process explained: </h4>
+          1: Created a database within the Firebase to check the status of the devices based on the value On/Off.<br>
+          2: Clicked On/Off button on the Web page, the script sent data to the Firebase.<br>
+          3: Whenever the value was turned On/Off the web page updated the database.<br>
+          4: The Python script on our Micro:bit read the data and turned the Micro:bit device On/Off as per the value stored within the Firebase database.<br>
+          5: The web page updated the Firebase database, while the Python script coded within the Micro:bit read the values and controlled the device based on the value. (On/Off)<br>
+          </p>
+          </p>
+         </td>
+         <td> <img style="width: 80%; height: auto" src="img/weblightcode.png"> <div><img style="width: 80%; height: auto" src="img/Light.png"></td></div>
+        
+         <br>
+        
+
+       </tr>
+     </table>
+     <h3>Fundamental programming skills demonstrated throughout project:</h3>
+     <!-- <p>Please see below an example of programming skills used throughout the project</p> -->
+  
+     <table>
+       <tr>
+         <th style="width:55%">Programming Skill </th>
+         <th>Examples</th>
+       </tr>
+       <tr>
+        <td><h4>Functions:</h4>Function was used to enhance the readability and to reduce duplication of the program. </td>
+        <td><img style="width: 100%; height: auto" src="img/functionValid.png"></td>
+      </tr>
+      <tr>
+        <td><h4>Algorithms:</h4> If statements, functions, and loops were used to collect data from the Firebase.</td>
+        <td><img style="width: 100%; height: auto" src="img/AlgoAll.PNG"></td>
+      </tr>
+      <tr>
+        <td><h4>Iteration code:</h4>Used the while loop for updating the database.</td>
+        <td><img style="width: 100%; height: auto" src="img/iteration.PNG"></td>
+      </tr>
+      <tr>
+        <td><h4>Database Table:</h4> Created Firebase database.</td>
+        <td><img style="width: 100%; height: auto" src="img/firebaseDb.PNG"></td>
+      </tr>
+      
+      <tr>
+        <td>Datatypes such as Strings were used throughout the programme.</td>
+        <td><img style="width: 100%; height: auto" src="img/dataTypes.PNG"></td>
+      </tr>
+      <tr>
+        <td><h4>Comments:</h4> Code was commented.</td>
+        <td><img style="width: 100%; height: auto" src="img/comments.PNG"></td>
+      </tr>
+     </table>
+  
+    <h3>Description, Type of Testing and User Cases: </h3>
+    <h3>Integration Tests: </h3>
+    <p>To verify that all individuals components that were built work together. The following issues were encountered during the testing, 
+      which were later corrected. Please see Pre and post-testing debugs and corrective actions.</p>
+     <table>
+       <tr>
+         <th>Test Case</th>
+         <th style="width:35%">Result (Pass/Fail)</th>
+         <th>Pre - Corrective Action screenshot/ debug</th>
+         <th>Post –Corrective action</th>
+         <th style="width:35%">Post Result (Pass/Fail)</th>
+       </tr>
+        <tr>
+          <td>At the top, click on links to different pages. Verify that the relevant page opens by clicking on each page.</td>
+          <td>Fail</td>
+          <td><img style="width: 100%; height: auto" src="img/testcase1.png"></td>
+          <td>The page link was fixed after correcting the herf link. . <br>
+            <img style="width: 100%; height: auto" src="img/postCorrect1.png"><br>Also added new page.<br><img style="width: 100%; height: auto" src="img/postCorrect2.png"></td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>Verify the password validation rules (Upper case, Lower case, Special character and Numeric letter are required in Password filed).</td>
+          <td>Pass</td>
+          <td><img style="width: 100%; height: auto;" src="img/postCorrect3.png"></td>
+          <td>N/A. </td>
+          <td>Pass</td>
+        </tr>
+       
+        <tr>
+          <td>Complete the registration form and submit it. Check for the alerts and redirect messages.</td>
+          <td>Fail</td>
+          <td>The web page generated the alert message however it did not redirect to the home page. </td>
+          <td>The "window.location" object used to get the current page (URL) and to redirect the browser to the index page. <img style="width: 100%; height: auto" src="img/postCorrect7.png">
+          </td></td>
+          <td>Pass</td>
+        </tr>
+     </table>
+     <br><br>
+     <h3>System & Functional testing: </h3>
+     <p>System testing was carried out to ensure that the whole system and components work as per the requirements. Such as turning on/off the lights through the webpage. 
+      Function testing was carried out to ensure that all features worked correctly. Such API testing was carried out to make sure that the graphs updated. </p>
+       <table>
+          <tr>
+            <th>Test Case</th>
+            <th style="width:35%">Result (Pass/Fail)</th>
+            <th>Pre - Corrective Action screenshot/ debug</th>
+            <th>Post Corrective action</th>
+            <th style="width:35%">Post Result (Pass/Fail)</th>
+          </tr>
+          <tr>
+            <td>Firebase Database testing. Check that database shows the value of On/Off once the button is clicked from the website.</td>
+            <td>Pass</td>
+            <td>Yes. The lights are turned on and the database changes its value.</td>
+            <td>N/A</td>
+            <td>Pass</td>
+          </tr>
+          <tr>
+            <td>Determine whether the Heating, Ventilation and Air Condition (HVAC) automatically turns On/Off once the temperature reaches the defined level within the Micro:bit code.</td>
+            <td>Pass</td>
+            <td>Pass. </td>
+            <td>N/A</td>
+            <td>Pass</td>
+          </tr>
+          
+          <tr>
+            <td>Check that the Graphs display the live Temperature data variation.</td>
+            <td>Fail</td>
+            <td> <img style="width: 100%; height: auto" src="img/postCorrect8.png"></td>
+            <td>I updated the source code. The website then showed the live data.</td>
+            <td>Pass</td>
+          </tr>
+          <tr>
+            <td>While clicking the buttons on the webpage, verify that the Graphs display the Monthly, Weekly, and Daily data.</td>
+            <td>Pass</td>
+            <td>Pass. No action required.</td>
+            <td>N/A</td>
+            <td>Pass</td>
+          </tr>
+       </table>
+       <h3>Acceptance Testing:</h3>
+       <p>Acceptance testing was to determine that all the functions worked as per user requirements. </p>
+       <table>
+        <tr>
+          <th>Test Case</th>
+          <th style="width:35%">Result (Pass/Fail)</th>
+          <th>Pre-Corrective Action screenshot/ debug</th>
+          <th>Post Corrective action</th>
+          <th style="width:35%">Post Result (Pass/Fail)</th>
+        </tr>
+        <tr>
+          <td>Check if all the functional and design specifications met the user requirements. </td>
+          <td>Pass</td>
+          <td>N/A. All worked accordingly, including adaptions made to the HVAC system </td>
+          <td>N/A</td>
+          <td>Pass</td>
+        </tr>
+       </table>
+      </section>
+      </body>
+       <footer style="text-align: center; color: #ffffff;" class="page-footer font-small blue">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 mt-auto">
+      © Leaving Certificate Computer Science Project 2022
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>

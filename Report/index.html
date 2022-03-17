@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <h1>Home Automation System Coursework Report</h1>
+   
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+  </header>
+  <nav>
+    <H2 style="color: #ffffff; margin-left: 16px;">Report Content</H3>
+    <ul>
+      <li><a href="index.html">1. Investigation and Plan</a></li>
+      <li><a href="Design.html">2. Design</a></li>
+      <li><a href="implementation_tetsing.html">3. Implementation and Testing</a></li>
+      <li><a href="evaluation.html">4. Evaluation </a></li>
+      <li><a href="refrences.html">5. References</a></li>
+      <li><a href="summary_count.html">6. Summary word count</a></li>
+    </ul>
+  </nav>
+  <body>
+    <section id="section-1">
+      <div style="text-align: right;">
+        <button style="text-align: right;" onclick="window.print()">Print</button>
+      </div>
+        <h1>1. Investigation & Plan:</h1>
+        <p>Smart homes incorporate automation systems to provide residents with increased convenience, security, energy efficiency and solutions to climate control. Networked 
+          devices connect directly/indirectly via a gateway to the internet in order to control/regulate household functions. In 2021, the smart home penetration rate worldwide
+           was at 12.2%, the number of smart homes worldwide was >258 million and the forecast smart home market worldwide was at 99.41 bn USD [1].       
+          </p>
+          <table style="width:100%">
+           <tr>
+           <td><h3>Energy Costs:</h3>The graph illustrates that electricity prices for households have been steadily increasing over the last ten years.                 
+            </td>
+             <td><img src="img/1.png" ><br> [2] </td>
+           </tr>
+    
+           <tr>
+             <td><img src="img/2.png" ><br> [3] </td>
+             <td><h3>Global Warming/Consequences:</h3> <br>
+              CO2 emissions worldwide increased from 6 billion to over 34 billion tonnes between 1950 & 2020 [3]. 
+              <p>NASA statistics reveal that from 1800-2021 global surface temperatures increased significantly (-0.1 to 0.8°C). 2021 had the 6th highest temperature on record (NOAA, 2021) due to global warming [4]. </p>
+              <p>In British Columbia, in 2021, 595 deaths occurred related to temperatures > 40 °C (‘heat-dome’), 70% of the dead were aged >70  years and 99% overheated inside a home/hotel [5]. </p>
+              <pbr>In Ireland 1983-2013, 294 deaths were caused by seven heatwaves [6].<p>
+              The elderly/disabled are at increased risk during heatwaves [7]. Hyperthermia, is a thermoregulatory disorder where core temperature increases > 40.5°C is a medical emergency. Early recognition of heat increases (externally/internally) is required to reduce the thermal risk [8].
+            </p>
+              </td>
+           </tr>
+           <tr>
+              <td><h3>Disabilities:</h3>
+              ‘Persons with disabilities’ are “… all persons with disabilities including those who have long-term physical, mental, intellectual or sensory impairments” [8].
+              The CSO (2016) reported that overall 262,818 people had difficulties with basic physical activities [9].
+              <td><img src="img/3.png"> <br> [9]</td>
+              </td>
+           </tr>
+           <!-- <tr>
+             <td>Forecast Smart Home Market worldwidz <br>https://www.statista.com/topics/2430/smart-homes/#dossierKeyfigures</td>
+             <td><img src="img/4.png"></td>
+            </tr> -->
+          </table>
+          <br>
+          <h3>Plan:</h3>
+          <p>It is proposed to develop an embedded home automation system which will reduce the users risk of hyperthermia indoors during heatwaves and monitor/control it remotely. </p>
+          <h3>End-Users/Stakeholders:</h3>
+             <p>Persons with disabilities/Older persons/General population.</p>
+            
+             <h3>Potential solutions to the brief:</h3>
+       
+             <table>
+               <tr>
+                 <th>Potential Solutions:</th>
+                 <th>User</th>
+                 <th>Problem addressed:</th>
+               </tr>
+               <tr>
+                 <td>Heating, ventilation and air condition (HVAC) Automatic temperature control </td>
+                 <td>Persons with intellectual/physical disabilities at risk from temperature increases</td>
+                 <td>Prevent hyperthermia (Heat)/ Hyperthermia(Cold) for persons unable to understand/respond to the risks</td>
+                
+               </tr>
+               <tr>
+                 <td>Automatic Window Open/Close </td>
+                 <td>General public</td>
+                 <td>Reduction of noise pollution above 70dB and air circulation</td>
+                
+               </tr>
+               <tr>
+                <td>Smart Door Open/Close Automatically </td>
+                <td>Wheelchair users</td>
+                <td>Removes accessibility problems entering/exiting rooms/buildings</td>
+              
+              </table>
+             <br> </br>
+          <h3>Existing Solution:</h3>
+          <table>
+            <tr>
+              <th>Company</th>
+              <th>Products/Function</th>
+              <th>User</th>
+              <!-- <th>Website </th> -->
+            </tr>
+            <tr>
+              <td>The Google Nest Learning Thermostat (2022) [10]</td>
+              <td>Adjusts temperatures to optimal levels</td>
+              <td>General population</td>
+              <!-- <td>https://store.google.com/product/nest_learning_thermostat_3rd_gen</td> -->
+            </tr>
+            <tr>
+              <td>Lilli [11]</td>
+              <td>Web-based interface monitors behaviours</td>
+              <td>People self-limiting conditions</td>
+              <!-- <td>https://www.intelligentlilli.com/</td> -->
+            </tr> 
+            <tr>
+              <td>Hunter Fans [12]</td>
+              <td>Smart ceiling fan, motion sensor integrates with thermostat.</td>
+              <td>General population</td>
+              <!-- <td>https://www.hunterfan.eu/</td> -->
+            </tr>
+          </table>
+        
+          <br>
+          <h3>Social Implications: </h3>
+          <p>Social Implications of the embedded home automation system will include increased independence for users, reduction of their risk of hyperthermia indoors during 
+            heatwaves providing reassurance and reductions in energy costs/consumption. It will contribute to The National Housing Strategy for
+             Disabled People’s 2022-2027 [13] aim to increase the provision of accessible homes/information/technology to promote people’s participation
+             in their communities and assist in the practical implementation of legislated guidelines from The United Nations Convention on the Rights 
+             of Persons with Disabilities (2015)/The National Positive Ageing Strategy (2015) [14,15]. Dependency on the internet,
+              privacy interference and the expense of implementation/maintenance creating disparities in uptake are some ethical concerns. The website will make the products accessible. 
+            </p>
+            
+          <h3>Objectives for the artefacts: </h3>
+            <table>
+              <tr>
+                <th>Artefacts</th>
+                <th>Objectives </th>
+                <th>Potential Technical Solutions:</th>
+                <th>Chosen Solution</th>
+              </tr>
+              <tr>
+                <td>Website </td>
+                <td>Interactive, Accessible
+                  Fictional automation system. 
+                  Marketing of product.
+                  Monitor/control the embedded system.
+                  Capture Data.
+                  Validation Checks.
+                  Display front-end features. 
+                  </td>
+                <td>Programming features: 
+                  HTML
+                  Firebase databases 
+                  Python
+                  JavaScript
+                  CSS
+                  bootstrap bundle min js
+                  bootstrap bundle CSS
+                  </td>
+                <td>All </td>
+               
+              </tr>
+              <tr>
+                <td>Embedded System:
+                  -	HVAC System 
+                  -	Remote/Internet Activated Lights
+                   </td>
+                <td>Temperature monitor/control
+                  Automated, Air circulating, Energy-efficient
+                  Time/triggered locally
+                  Sensors, Communication network.
+                  </td>
+                <td>Automated fan/temperature sensor 
+                  General Purpose Operating System (GPOS) 
+                  Real-Time Operating Systems (RTOS) 
+                  Microprocessor 
+                  Micro:Bit: Microcontroller 
+                  Hardware/Software
+                <td>All </td>
+                  </td>
+              
+         
+            </table>
+           
+      </section>
+  </body>
+  <footer style="text-align: center; color: #ffffff;" class="page-footer font-small blue">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 mt-auto">
+      © Leaving Certificate Computer Science Project 2022
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <script src="javascript.js"></script>
+</html>

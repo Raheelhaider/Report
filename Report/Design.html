@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <h1>Home Automation System Coursework Report</h1>
+   
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">
+  </header>
+  <nav>
+    <H2 style="color: #ffffff; margin-left: 16px;">Report Content</H3>
+    <ul>
+      <li><a href="index.html">1. Investigation and Plan</a></li>
+      <li><a href="Design.html">2. Design</a></li>
+      <li><a href="implementation_tetsing.html">3. Implementation and Testing</a></li>
+      <li><a href="evaluation.html">4. Evaluation </a></li>
+      <li><a href="refrences.html">5. References</a></li>
+      <li><a href="summary_count.html">6. Summary word count</a></li>
+    </ul>
+  </nav>
+  <body>
+    <section id="section-2">
+      <div style="text-align: right">
+        <button style="text-align: right" onclick="window.print()">
+          Print
+        </button>
+      </div>
+      <h1>2. Design:</h1>
+      <table>
+        <tr>
+          <th style="width:35%">Artefact</th>
+          <th>Design Requirements</th>
+          <th>Programs language /Technical components</th>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td>
+            Create minimum of 7 pages:
+            Home<br />
+            Product<br />
+            Product Detail<br />
+            Login<br />
+            Register<br />
+            Statistics<br />
+            MicoBit Controller
+          </td>
+          <td>
+            Programming features<br />
+            HTML<br />
+            Firebase databases<br />
+            Python<br />
+            Customized JavaScript<br />
+            Customized CSS<br />
+            bootstrap bundle min js<br />
+            bootstrap bundle CSS<br />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <h4>Description:</h4> The objective of the website is to create an online presence for promoting and controlling the embedded system.
+            <h4>Top Navigation Section:</h4> To create a top navigation to display the above pages.
+            <h4>Home Page:</h4> The main webpage of the website, to include company information.
+            <h4>Products page:</h4> Information about specific products will be displayed (up to 6 products will be displayed)
+            <h4>Products Detail Page (PDP):</h4> Include two “View Demo” buttons. Once clicked a video will be uploaded within the frame.
+            <h4>Login page:</h4>Create Sign Up button and Sign In form with password reset option.
+            <h4>Registration page:</h4>Will contain all relevant fields required for registration. Every field will have its own validating rule.  <br/>
+            - All fields must be completed. <br/>
+            - First, last and User name must be alphabet only. <br/>
+            - Email must contain @ symbol..<br />
+            - Password length minimum: > 6  and < 12.<br/>
+            - Once completed should be redirected to the index.html page.<br/>
+            - For any violation there must be a popup error message.<br/>
+            - Form not to be submitted unless the checkbox is ticked.  <br />
+            - As soon as the form is submitted, redirect it to the homepage.  <br />
+
+
+            <h4>Statistics page:</h4>
+            Each graph has daily, weekly, and monthly buttons to show the corresponding statistics. To display the graphs within the webpage, create a CSV file.
+             That CSV file will be then converted to HTML format using Python Script. However, to display the temperature live data, 
+            the ThingSpeak platform will be used. In order to show the live data, the ThingSpeak platform will be used instead of the CSV file. 
+            <br />
+            <h4>MicroBit Controller page: </h4>
+            On/Off buttons will be included on this page to control the lights or any output device. The live temperature sensor will be displayed using the ThingSpeak platform, 
+            a platform for IoT analytics. The value of the Firebase database will be changed when the On/Off button is clicked.
+            <br />
+
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <h3>Highlevel Website Design Requirements</h3>
+            <br />
+            <img src="img/5.jpg" style="width: 1100px; height: auto" />
+          </td>
+        </tr>
+      </table>
+
+      <br />
+
+      <table>
+        <tr>
+          <th>Artefact</th>
+          <th>Design</th>
+          <th>Programs language /Technical components / Material</th>
+        </tr>
+        <tr>
+          <td>Heating, ventilation and air condition (HVAC) Automatic temperature control</td>
+          <td><img style="width: 100%; height: auto" src="img/6.png" /></td>
+          <td>
+            <ul>
+              <li>IoT:bit for Micro:bit (with Internet connectivity)</li>
+              <li>Micro:bit Sensor.</li>
+              <li>1 x Fan</li>
+              <li>1 x Micro:bit</li>
+              <li>1 x USB cable</li>
+              <li>1 x WiFi Access Point with internet connection</li>
+              <li>1 x Analog Temperature Sensor</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <h4>Description:</h4>
+            HVAC equipment is controlled via temperature sensor to maintain the desired temperature by a cooling/heating system.
+             This module is based on the working principle of a temperature sensor.
+              It reads temperature changes in its surroundings and sends the data to the analogue IO in the board. 
+              The Heating mode will be activated if the temperature is lower than 18 Degrees Celsius.
+             If the temperature stays between 18 and 29 Degrees Celsius, the system will remain off. If the temperature stays above 30, the cooling fan will remain on.
+          </td>
+        </tr>
+       </table>
+       <table>
+        <tr>
+          <td colspan="3" style="text-align: center">
+            <h4>System Architecture Diagram</h4>
+            <img
+              style="height: auto; width: 500px"
+              src="img/autoFanProcess.png"
+            />
+          </td>
+          <td colspan="3" style="text-align: center">
+            <h4>Data flow diagram</h4>
+            <img style="height: auto; width: 500px" src="img/autoFanFlow.png" />
+          </td>
+         
+        </tr>
+      
+       </table>
+
+       <br>
+       <br>
+       <table>
+        <tr>
+          <th>Artefact</th>
+          <th>Design</th>
+          <th>Programs language /Technical components</th>
+        </tr>
+        <tr>
+          <td>Auto Light</td>
+          <td>Micro:bit Controller</td>
+          <td>
+            <ul>
+              <li>1 x Micro:bit Motherboard</li>
+              <li>1 x LED Light</li>
+              <li>1 x Micro: bit</li>
+              <li>1 x USB cable</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <h4>Description:</h4>
+            <p>
+              The objective is to create an On/Off button to be controlled by the website, a light will be used to demonstrate this.
+                Prepare the Micro:bit hardware. Code the Micro:bit with python. Download the code in Micro:bit using the USB. Assemble the Micro:bit device with light.
+                 Connect the Micro:bit with USB within COM3 port. Use the Turn On/Off button on the “Micro:bit Controller” web page to controll the LED Lights remotely
+            </p>
+            
+          </td>
+        </tr>
+      </table>
+      <table style="text-align: center;">
+        <tr>
+          <td colspan="1">
+            <h4>System Architecture Diagram</h4><img
+            src="img/IoTFlowDiagram.png"
+            style="height: auto; width: 300px; text-align: center"
+          /></td>
+          <td colspan="1">
+            <h4>Data flow diagram</h4><img
+            src="img/autoFanFlow.png"
+            style="height: auto; width: 520px; text-align: center"
+          /></td>
+        </tr>
+      </table>
+    </section>
+  </body>
+
+  <footer style="text-align: center; color: #ffffff;" class="page-footer font-small blue">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3 mt-auto">
+      © Leaving Certificate Computer Science Project 2022
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>
